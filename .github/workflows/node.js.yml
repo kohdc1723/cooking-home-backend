@@ -29,3 +29,6 @@ jobs:
       run: |
         touch .env
         echo "${{ secrets.BACKEND_ENV }}" > .env
+    
+    - name: Restart server
+      run: pm2 restart server
