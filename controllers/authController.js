@@ -61,6 +61,7 @@ const login = asyncHandler(async (req, res) => {
 const refresh = (req, res) => {
     // refresh token doesn't exist in cookies
     const cookies = req.cookies;
+    console.log(cookies);
 
     if (!cookies?.refreshToken) {
         return res.status(401).json({ message: "Unauthorized" });
@@ -76,6 +77,7 @@ const refresh = (req, res) => {
         }
         
         // username not found in database
+        console.log(decoded.username)
         const foundUser = await User.findOne({ username: decoded.username });
         if (!foundUser) {
             return res.status(401).json({ message: "Unauthorized" });
