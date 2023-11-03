@@ -62,6 +62,9 @@ const refresh = (req, res) => {
     // refresh token doesn't exist in cookies
     const cookies = req.cookies;
 
+    console.log(JSON.stringify(cookies));
+    console.log(cookies?.refreshToken);
+
     if (!cookies?.refreshToken) {
         return res.status(401).json({ message: "Unauthorized" });
     }
