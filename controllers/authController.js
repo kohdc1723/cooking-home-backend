@@ -44,7 +44,7 @@ const login = asyncHandler(async (req, res) => {
     // create secure cookie with refresh token
     res.cookie("refreshToken", refreshToken, {
         httpOnly: true, // accessible only by web server
-        secure: true, // https
+        // secure: true, // https
         sameSite: "none", // cross-site cookie
         maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
     });
@@ -61,7 +61,6 @@ const login = asyncHandler(async (req, res) => {
 const refresh = (req, res) => {
     // refresh token doesn't exist in cookies
     const cookies = req.cookies;
-    console.log(cookies);
 
     if (!cookies?.refreshToken) {
         return res.status(401).json({ message: "Unauthorized" });
@@ -77,7 +76,6 @@ const refresh = (req, res) => {
         }
         
         // username not found in database
-        console.log(decoded.username)
         const foundUser = await User.findOne({ username: decoded.username });
         if (!foundUser) {
             return res.status(401).json({ message: "Unauthorized" });
@@ -110,7 +108,7 @@ const logout = (req, res) => {
     res.clearCookie("refreshToken", {
         httpOnly: true,
         sameSite: "none",
-        secure: true
+        // secure: true
     });
     
     return res.json({ message: "cookie cleared" });
