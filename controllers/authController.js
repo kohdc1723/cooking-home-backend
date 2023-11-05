@@ -44,7 +44,7 @@ const login = asyncHandler(async (req, res) => {
     // create secure cookie with refresh token
     res.cookie("refreshToken", refreshToken, {
         httpOnly: true, // accessible only by web server
-        // secure: true, // https
+        secure: true, // https
         sameSite: "none", // cross-site cookie
         maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
     });
@@ -111,7 +111,7 @@ const logout = (req, res) => {
     res.clearCookie("refreshToken", {
         httpOnly: true,
         sameSite: "none",
-        // secure: true
+        secure: true
     });
     
     return res.json({ message: "cookie cleared" });
