@@ -31,4 +31,4 @@ jobs:
         echo "${{ secrets.BACKEND_ENV }}" > .env
     
     - name: Restart server using pm2
-      run: /home/ubuntu/.nvm/versions/node/v20.9.0/bin/pm2 restart server.js
+      run: /home/ubuntu/.nvm/versions/node/v20.9.0/bin/pm2 restart server
