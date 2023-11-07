@@ -4,6 +4,9 @@
 # cooking-home-backend
 ***cooking-home-backend*** repository contains the codebase of the backend-side of the ***Cooking Home*** application, serving as a RESTful API provider for the application.
 
+### Link
+[https://cooking-home-api.kro.kr](https://cooking-home-api.kro.kr)
+
 ### Built with
 ![javascript-logo]
 ![nodejs-logo]
