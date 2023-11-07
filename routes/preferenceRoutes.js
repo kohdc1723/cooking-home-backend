@@ -5,7 +5,7 @@ const verifyToken = require("../middlewares/verifyToken");
 
 router.use(verifyToken);
 
-router.route("/:id").get(preferenceController.getPreference);
+router.route("/:userId").get(preferenceController.getPreference);
 router.route("/").post(preferenceController.createPreference);
 router.route("/").patch(preferenceController.updatePreference);
 
