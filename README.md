@@ -43,7 +43,7 @@
 ### Preference
 | Method  | Endpoint          | Parameters (required*)                                              | Description                                    | Auth Required |
 |---------|-------------------|---------------------------------------------------------------------|------------------------------------------------|---------------|
-| `GET`   | `/preference/:id` | -                                                                   | Get a preference by user id                    | Access Token  |
+| `GET`   | `/preference/:userId` | -                                                                   | Get a preference by user id                    | Access Token  |
 | `POST`  | `/preference`     | `userId: string*`                                                   | Create a default preference of the user        | Access Token  |
 | `PATCH` | `/preference`     | `id: string*`<br>`favorites: [string]*`<br>`ingredients: [string]*` | Update a preference                            | Access Token  |
 
