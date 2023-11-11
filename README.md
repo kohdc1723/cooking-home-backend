@@ -15,13 +15,13 @@
 ![mongoose-logo]
 ![jwt-logo]
 
-### Deployed with
+### CI/CD with
 ![ec2-logo]
+![route53-logo]
 ![github-actions-logo]
 
 ### Web Server Configuration and Security Setup with
 ![nginx-logo]
-![route53-logo]
 ![letsencrypt-logo]
 
 ## Endpoints
