@@ -1,13 +1,10 @@
 # Cooking Home
 ***Cooking Home*** offers users an extensive ***recipe search engine*** and ***recommends recipes*** based on their favorite foods and the ingredients they have at home.
-
-# cooking-home-frontend
-***cooking-home-frontend*** repository contains the frontend-side codebase of the ***Cooking Home*** application.
-- [https://cooking-home.kro.kr](https://cooking-home.kro.kr)
+- Frontend Repo: [https://github.com/kohdc1723/cooking-home-frontend](https://github.com/kohdc1723/cooking-home-frontend)
 
 # cooking-home-backend
 ***cooking-home-backend*** repository contains the backend-side codebase of the ***Cooking Home*** application, serving as a RESTful API provider for the application.
-- [https://cooking-home-api.kro.kr](https://cooking-home-api.kro.kr)
+- Backend API URL: [https://cooking-home-api.kro.kr](https://cooking-home-api.kro.kr)
 
 ---
 
@@ -28,7 +25,9 @@
 ![nginx-logo]
 ![letsencrypt-logo]
 
-## Endpoints
+---
+
+# Endpoints
 ### Authentication
 | Method   | Endpoint        | Parameters (required*)                     | Description                                    | Auth Required |
 |----------|-----------------|--------------------------------------------|------------------------------------------------|---------------|
@@ -50,6 +49,8 @@
 | `GET`   | `/preference/:userId` | -                                                                   | Get a preference by user id                    | Access Token  |
 | `POST`  | `/preference`     | `userId: string*`                                                   | Create a default preference of the user        | Access Token  |
 | `PATCH` | `/preference`     | `id: string*`<br>`favorites: [string]*`<br>`ingredients: [string]*` | Update a preference                            | Access Token  |
+
+---
 
 [javascript-logo]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
 [nodejs-logo]: https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
