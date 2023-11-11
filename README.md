@@ -1,11 +1,15 @@
 # Cooking Home
-***Cooking Home*** is an application that offers users a extensive ***recipe search engine*** and ***recommends recipes*** based on their favorite foods and the ingredients they have in their refrigerator.
+***Cooking Home*** offers users an extensive ***recipe search engine*** and ***recommends recipes*** based on their favorite foods and the ingredients they have at home.
+
+# cooking-home-frontend
+***cooking-home-frontend*** repository contains the frontend-side codebase of the ***Cooking Home*** application.
+- [https://cooking-home.kro.kr](https://cooking-home.kro.kr)
 
 # cooking-home-backend
-***cooking-home-backend*** repository contains the codebase of the backend-side of the ***Cooking Home*** application, serving as a RESTful API provider for the application.
+***cooking-home-backend*** repository contains the backend-side codebase of the ***Cooking Home*** application, serving as a RESTful API provider for the application.
+- [https://cooking-home-api.kro.kr](https://cooking-home-api.kro.kr)
 
-### Link
-[https://cooking-home-api.kro.kr](https://cooking-home-api.kro.kr)
+---
 
 ### Built with
 ![javascript-logo]
