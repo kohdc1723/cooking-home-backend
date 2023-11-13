@@ -1,10 +1,10 @@
 # Cooking Home
 ***Cooking Home*** offers users an extensive ***recipe search engine*** and ***recommends recipes*** based on their favorite foods and the ingredients they have at home.
-- Frontend Repo: [https://github.com/kohdc1723/cooking-home-frontend](https://github.com/kohdc1723/cooking-home-frontend)
+- Frontend Repository: [https://github.com/kohdc1723/cooking-home-frontend](https://github.com/kohdc1723/cooking-home-frontend)
 
 # cooking-home-backend
 ***cooking-home-backend*** repository contains the backend-side codebase of the ***Cooking Home*** application, serving as a RESTful API provider for the application.
-- Backend API URL: [https://cooking-home-api.kro.kr](https://cooking-home-api.kro.kr)
+- RESTful API URL: [https://cooking-home-api.kro.kr](https://cooking-home-api.kro.kr)
 
 ---
 
