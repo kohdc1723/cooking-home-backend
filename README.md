@@ -1,11 +1,12 @@
 # Cooking Home
-***Cooking Home*** is an application that offers users a extensive ***recipe search engine*** and ***recommends recipes*** based on their favorite foods and the ingredients they have in their refrigerator.
+***Cooking Home*** offers users an extensive ***recipe search engine*** and ***recommends recipes*** based on their favorite foods and the ingredients they have at home.
+- Frontend Repository: [https://github.com/kohdc1723/cooking-home-frontend](https://github.com/kohdc1723/cooking-home-frontend)
 
 # cooking-home-backend
-***cooking-home-backend*** repository contains the codebase of the backend-side of the ***Cooking Home*** application, serving as a RESTful API provider for the application.
+***cooking-home-backend*** repository contains the backend-side codebase of the ***Cooking Home*** application, serving as a RESTful API provider for the application.
+- RESTful API URL: [https://cooking-home-api.kro.kr](https://cooking-home-api.kro.kr)
 
-### Link
-[https://cooking-home-api.kro.kr](https://cooking-home-api.kro.kr)
+---
 
 ### Built with
 ![javascript-logo]
@@ -24,7 +25,9 @@
 ![nginx-logo]
 ![letsencrypt-logo]
 
-## Endpoints
+---
+
+# Endpoints
 ### Authentication
 | Method   | Endpoint        | Parameters (required*)                     | Description                                    | Auth Required |
 |----------|-----------------|--------------------------------------------|------------------------------------------------|---------------|
@@ -46,6 +49,8 @@
 | `GET`   | `/preference/:userId` | -                                                                   | Get a preference by user id                    | Access Token  |
 | `POST`  | `/preference`     | `userId: string*`                                                   | Create a default preference of the user        | Access Token  |
 | `PATCH` | `/preference`     | `id: string*`<br>`favorites: [string]*`<br>`ingredients: [string]*` | Update a preference                            | Access Token  |
+
+---
 
 [javascript-logo]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
 [nodejs-logo]: https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
