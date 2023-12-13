@@ -3,8 +3,8 @@
 - Frontend Repository: [https://github.com/kohdc1723/cooking-home-frontend](https://github.com/kohdc1723/cooking-home-frontend)
 
 # cooking-home-backend
-***cooking-home-backend*** repository contains the backend-side codebase of the ***Cooking Home*** application, serving as a RESTful API provider for the application.
-- RESTful API URL: [https://cooking-home-api.kro.kr](https://cooking-home-api.kro.kr)
+***cooking-home-backend*** repository contains the backend-side codebase of the ***Cooking Home*** application, serving as a serverless RESTful API provider for the application.
+- Base API URL: [https://mioqkb90kc.execute-api.ca-central-1.amazonaws.com/prod/api](https://mioqkb90kc.execute-api.ca-central-1.amazonaws.com/prod/api)
 
 ---
 
@@ -17,13 +17,9 @@
 ![jwt-logo]
 
 ### CI/CD with
-![ec2-logo]
-![route53-logo]
+![aws-lambda-logo]
+![aws-api-gateway-logo]
 ![github-actions-logo]
-
-### Web Server Configuration and Security Setup with
-![nginx-logo]
-![letsencrypt-logo]
 
 ---
 
@@ -58,8 +54,7 @@
 [mongodb-logo]: https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white
 [mongoose-logo]: https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white
 [jwt-logo]: https://img.shields.io/badge/JSONWebToken-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white
-[ec2-logo]: https://img.shields.io/badge/Amazon%20EC2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white
 [github-actions-logo]: https://img.shields.io/badge/Github%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white
-[nginx-logo]: https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=nginx&logoColor=white
 [route53-logo]: https://img.shields.io/badge/Amazon%20Route53-8C4FFF?style=for-the-badge&logo=amazonroute53&logoColor=white
-[letsencrypt-logo]: https://img.shields.io/badge/Let's%20Encrypt-003A70?style=for-the-badge&logo=letsencrypt&logoColor=white
+[aws-lambda-logo]: https://img.shields.io/badge/AWS%20Lambda-FF9900?style=for-the-badge&logo=awslambda&logoColor=white
+[aws-api-gateway-logo]: https://img.shields.io/badge/AWS%20API%20Gateway-FF4F8B?style=for-the-badge&logo=amazonapigateway&logoColor=white
