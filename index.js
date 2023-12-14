@@ -12,44 +12,36 @@ const PORT = process.env.PORT || 3500;
 
 const app = express();
 
-const run = async () => {
-    try {
-        await connectDb();
+connectDb();
 
-        // middlewares
-        app.use(cors(corsOptions));
-        app.use(express.json());
-        app.use(cookieParser());
-        app.use(express.static(path.join(__dirname, "public")));
+// middlewares
+app.use(cors(corsOptions));
+app.use(express.json());
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, "public")));
 
-        // routers
-        app.use("/api", require("./routes/rootRoutes")); // public
-        app.use("/api/auth", require("./routes/authRoutes")); // public
-        app.use("/api/users", require("./routes/usersRoutes")); // private
-        app.use("/api/preference", require("./routes/preferenceRoutes")); // private
-        // catch all
-        app.all("*", (req, res) => {
-            res.status(404);
+// routers
+app.use("/api", require("./routes/rootRoutes")); // public
+app.use("/api/auth", require("./routes/authRoutes")); // public
+app.use("/api/users", require("./routes/usersRoutes")); // private
+app.use("/api/preference", require("./routes/preferenceRoutes")); // private
+// catch all
+app.all("*", (req, res) => {
+    res.status(404);
 
-            if (req.accepts("html")) {
-                res.sendFile(path.join(__dirname, "views", "404.html"));
-            } else if (req.accepts("json")) {
-                res.json({ message: "404 not found" });
-            } else {
-                res.type("txt").send("404 not found");
-            }
-        });
-
-        if (process.env.ENVIRONMENT === "serverless") {
-            module.exports.handler = serverless(app);
-        } else {
-            app.listen(PORT, () => {
-                console.log(`Server running on port ${PORT}`);
-            });
-        }
-    } catch (err) {
-        console.error(err);
+    if (req.accepts("html")) {
+        res.sendFile(path.join(__dirname, "views", "404.html"));
+    } else if (req.accepts("json")) {
+        res.json({ message: "404 not found" });
+    } else {
+        res.type("txt").send("404 not found");
     }
-};
+});
 
-run();
+if (process.env.ENVIRONMENT === "serverless") {
+    module.exports.handler = serverless(app);
+} else {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+}
