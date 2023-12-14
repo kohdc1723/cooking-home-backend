@@ -12,33 +12,33 @@ const PORT = process.env.PORT || 3500;
 
 const app = express();
 
-// middlewares
-app.use(cors(corsOptions));
-app.use(express.json());
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
-
-// routers
-app.use("/api", require("./routes/rootRoutes")); // public
-app.use("/api/auth", require("./routes/authRoutes")); // public
-app.use("/api/users", require("./routes/usersRoutes")); // private
-app.use("/api/preference", require("./routes/preferenceRoutes")); // private
-// catch all
-app.all("*", (req, res) => {
-    res.status(404);
-
-    if (req.accepts("html")) {
-        res.sendFile(path.join(__dirname, "views", "404.html"));
-    } else if (req.accepts("json")) {
-        res.json({ message: "404 not found" });
-    } else {
-        res.type("txt").send("404 not found");
-    }
-});
-
-const startServer = () => {
+const run = async () => {
     try {
-        connectDb();
+        await connectDb();
+
+        // middlewares
+        app.use(cors(corsOptions));
+        app.use(express.json());
+        app.use(cookieParser());
+        app.use(express.static(path.join(__dirname, "public")));
+
+        // routers
+        app.use("/api", require("./routes/rootRoutes")); // public
+        app.use("/api/auth", require("./routes/authRoutes")); // public
+        app.use("/api/users", require("./routes/usersRoutes")); // private
+        app.use("/api/preference", require("./routes/preferenceRoutes")); // private
+        // catch all
+        app.all("*", (req, res) => {
+            res.status(404);
+
+            if (req.accepts("html")) {
+                res.sendFile(path.join(__dirname, "views", "404.html"));
+            } else if (req.accepts("json")) {
+                res.json({ message: "404 not found" });
+            } else {
+                res.type("txt").send("404 not found");
+            }
+        });
 
         if (process.env.ENVIRONMENT === "serverless") {
             module.exports.handler = serverless(app);
@@ -52,4 +52,4 @@ const startServer = () => {
     }
 };
 
-startServer();
+run();
