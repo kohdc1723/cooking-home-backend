@@ -38,7 +38,7 @@ app.all("*", (req, res) => {
 
 const startServer = async () => {
     try {
-        connectDb();
+        await connectDb();
 
         if (process.env.ENVIRONMENT === "serverless") {
             module.exports.handler = serverless(app);
