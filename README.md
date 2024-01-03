@@ -8,7 +8,7 @@
 
 ---
 
-# File Structure
+# Tech Stack
 ### Built with
 ![javascript-logo]
 ![nodejs-logo]
