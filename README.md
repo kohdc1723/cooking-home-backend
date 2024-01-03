@@ -1,14 +1,15 @@
-# Cooking Home
-***Cooking Home*** offers users an extensive ***recipe search engine*** and ***recommends recipes*** based on their favorite foods and the ingredients they have at home.
-- Frontend Repository: [https://github.com/kohdc1723/cooking-home-frontend](https://github.com/kohdc1723/cooking-home-frontend)
-
 # cooking-home-backend
-***cooking-home-backend*** repository contains the backend-side codebase of the ***Cooking Home*** application, serving as a serverless RESTful API provider for the application.
-- Base API URL: [https://mioqkb90kc.execute-api.ca-central-1.amazonaws.com/prod/api](https://mioqkb90kc.execute-api.ca-central-1.amazonaws.com/prod/api)
+***Cooking Home*** offers users an extensive ***recipe search engine*** and ***recommends recipes*** based on their favorite foods and the ingredients they have at home.
+
+***cooking-home-backend*** repository contains the backend-side codebase of the ***Cooking Home*** application, serving as a serverless RESTful API.
+
+> Base API URL: [https://mioqkb90kc.execute-api.ca-central-1.amazonaws.com/prod/api](https://mioqkb90kc.execute-api.ca-central-1.amazonaws.com/prod/api)
+
+> github/cooking-home-frontend: [https://github.com/kohdc1723/cooking-home-frontend](https://github.com/kohdc1723/cooking-home-frontend)
 
 ---
 
-# Tech Stack
+# Tech stack
 ### Built with
 ![javascript-logo]
 ![nodejs-logo]
