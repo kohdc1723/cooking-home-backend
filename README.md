@@ -23,6 +23,45 @@
 
 ---
 
+# File structure
+    .
+    ├── index.js                      # entry point of the express app
+    │
+    ├── routes                        # routes for distinct features
+    │   ├── rootRoutes.js             # root routes
+    │   ├── authRoutes.js             # routes related to the authentication
+    │   ├── preferenceRoutes.js       # routes related to the user preference
+    │   └── usersRoutes.js            # routes related to the users
+    │
+    ├── models                        # Mongoose schemas
+    │   ├── Preference.js             # Preference schema
+    │   └── User.js                   # User schema
+    │
+    ├── views                         # HTML templates for rendering views
+    │   ├── 404.html                  # HTML for the 404 error page
+    │   └── index.html                # HTML for the index page
+    │
+    ├── controllers                   # controllers for handling business logic
+    │   ├── authController.js         # controllers related to the authentication
+    │   ├── preferenceController.js   # controllers related to the user preference
+    │   └── usersController.js        # controllers related to the users
+    │
+    ├── middlewares                   # custom middlewares
+    │   └── verifyToken.js            # middleware for verifying JWT
+    │
+    ├── config                        # configurations
+    │   ├── allowedOrigins.js         # allowed origins for CORS
+    │   ├── corsOptions.js            # configuration for CORS
+    │   └── connectDb.js              # configuration for connecting to MongoDB
+    │
+    ├── public                        # static files
+    │   └── css                       # stylesheets
+    │       └── style.css             # main css file
+    │
+    └── README.md                     # README file
+
+---
+
 # Endpoints
 ### Authentication
 | Method   | Endpoint        | Parameters (required*)                     | Description                                    | Auth Required |
